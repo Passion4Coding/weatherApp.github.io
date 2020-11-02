@@ -209,6 +209,14 @@ $(document).ready(function () {
   });
 });
 
+
+$(document).keypress(function (event) {
+  var keycode = event.keyCode ? event.keyCode : event.which;
+  if (keycode == "13") {
+    searchCity();
+  }
+});
+
 var options = {
   chart: {
     type: "line",
